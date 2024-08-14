@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="quotes">
+            <p>"IT ALWAYS SEEMS IMPOSSIBLE UNTIL IT'S DONE"</p>
+            <p>"THE FUTURE DEPENDS ON WHAT YOU DO TODAY"</p>
+            <p>"DO IT JUST DOOO IT!!!"</p>
+        </div>
+        <div class="todo-list">
+            <h1>To-Do List</h1>
+            <ul>
+                {% for task in tasks %}
+                    <li>
+                        {{ task.task }}
+                        <a href="{{ url_for('edit_task', task_id=task.id) }}">Edit</a>
+                        <form action="{{ url_for('delete_task', task_id=task.id) }}" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for('add_task') }}">Add a new task</a>
+            <form action="{{ url_for('logout') }}" method="POST" style="display:inline;">
+                <button type="submit">Logout</button>
+            </form>
+            
+        </div>
+        <div class="profile">
+            <h2>Profile</h2>
+            <p>Username: {{ current_user.username }}</p>
+            <a href="{{ url_for('logout') }}"></a>
+           
+
+        </div>
+    </div>
+</body>
+</html>

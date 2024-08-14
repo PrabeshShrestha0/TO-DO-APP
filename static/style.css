@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #010d1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Add this line */
+}
+
+h1 {
+    color: #7a8688;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.quotes {
+    position: absolute; /* Add this line */
+    top: 50%; /* Center vertically */
+    left: 30px; /* Adjust distance from the left */
+    transform: translateY(-50%); /* Center vertically */
+    max-width: 300px; /* Adjust the max width if needed */
+}
+
+.quotes p {
+    color: #829292;
+    text-align: left;
+    margin-left: 10; /* Adjust margin to 0 */
+    font-size: 26px; /* Make the text larger */
+}
+
+.todo-list {
+    background: rgb(203, 209, 205);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    background-color: #e9ecef;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+    color: #10dbdb;
+}
+
+label, input, button {
+    display: block;
+    margin: 10px auto;
+    color: #077e64;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.profile-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.profile-container h1 {
+    margin-bottom: 20px;
+}
+
+.profile-container form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-container form .btn {
+    width: 100%;
+}
+
+
+.register-container {
+    background: #010d1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.register-container h1 {
+    margin-bottom: 20px;
+}
+
+.register-container form {
+    margin-top: 20px;
+}
+.profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgb(134, 132, 132);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(134, 82, 82, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.profile h2 {
+    margin-top: 0;
+}
+
+.profile p {
+    margin: 5px 0;
+}
+a {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
